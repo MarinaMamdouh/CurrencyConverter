@@ -16,6 +16,8 @@
 		F848D45E27CD38640085CDA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D45D27CD38640085CDA8 /* Constants.swift */; };
 		F848D46027CD39B40085CDA8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D45F27CD39B40085CDA8 /* NetworkManager.swift */; };
 		F848D46327CD3B250085CDA8 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D46227CD3B250085CDA8 /* Currency.swift */; };
+		F8D3F2B827CD4C050018380C /* CurrencyTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3F2B727CD4C050018380C /* CurrencyTableCellView.swift */; };
+		F8D3F2BA27CD4D620018380C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3F2B927CD4D620018380C /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		F848D45D27CD38640085CDA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F848D45F27CD39B40085CDA8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F848D46227CD3B250085CDA8 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		F8D3F2B727CD4C050018380C /* CurrencyTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableCellView.swift; sourceTree = "<group>"; };
+		F8D3F2B927CD4D620018380C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		F848D45627CD37800085CDA8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F8D3F2B927CD4D620018380C /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		F848D45727CD37B20085CDA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F848D46427CD3E130085CDA8 /* SubViews */,
 				F848D44627CD37080085CDA8 /* Main.storyboard */,
 				F848D44B27CD37090085CDA8 /* LaunchScreen.storyboard */,
 			);
@@ -130,6 +136,14 @@
 				F848D46227CD3B250085CDA8 /* Currency.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F848D46427CD3E130085CDA8 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				F8D3F2B727CD4C050018380C /* CurrencyTableCellView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +219,10 @@
 			files = (
 				F848D46327CD3B250085CDA8 /* Currency.swift in Sources */,
 				F848D44527CD37080085CDA8 /* MainViewController.swift in Sources */,
+				F8D3F2B827CD4C050018380C /* CurrencyTableCellView.swift in Sources */,
 				F848D45E27CD38640085CDA8 /* Constants.swift in Sources */,
 				F848D46027CD39B40085CDA8 /* NetworkManager.swift in Sources */,
+				F8D3F2BA27CD4D620018380C /* Date+Extension.swift in Sources */,
 				F848D44127CD37080085CDA8 /* AppDelegate.swift in Sources */,
 				F848D44327CD37080085CDA8 /* SceneDelegate.swift in Sources */,
 			);
