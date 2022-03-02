@@ -40,11 +40,12 @@ class NetworkManager{
                     //let parsedData = try JsonManager.jsonManager.parse(data: mydata, to: CurrencyData.self)
                     let decoder = JSONDecoder()
                     let jsonCurrencies = try decoder.decode(CurrencyData.self, from: mydata)
-                        let currencies = jsonCurrencies.getCurrencies()
+                    let currencies = jsonCurrencies.getCurrencies()
+                    if currencies.count == 0{
+                        completionHandler([],Errors.ParsingDataError)
+                    } else{
                         completionHandler(currencies,nil)
-//                    if let currencies = parsedData?.getCurrencies(){
-//                        completionHandler(currencies,nil)
-//                    }
+                    }
                     
                 }
                 catch{

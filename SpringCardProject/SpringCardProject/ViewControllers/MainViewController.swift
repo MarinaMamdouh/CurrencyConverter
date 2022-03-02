@@ -7,8 +7,10 @@
 
 import UIKit
 
-class MainViewController: UITableViewController {
+class MainViewController: UIViewController {
 
+    @IBOutlet weak var errorView: ErrorView!
+    @IBOutlet weak var tableView: UITableView!
     private var currencies:[Currency] = []
     private var selectedCurrency:Currency!
     override func viewDidLayoutSubviews() {
@@ -18,9 +20,10 @@ class MainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        getCurrencies()
-        //self.view.backgroundColor =  UIColor(named: Constants.UI.BACKGROUND_COLOR_NAME)
-        
+        tableView.delegate =  self
+        tableView.dataSource =  self
+        errorView.delegate =  self
+        reloadCurrencies()
         
     }
     
@@ -36,38 +39,70 @@ class MainViewController: UITableViewController {
         }
     }
     
-    func getCurrencies(){
+    private func reloadCurrencies(){
         NetworkManager.networkManager.getCurriencesRate(completionHandler: { curr, error in
-            guard let e = error else{
-                self.currencies =  curr
-                DispatchQueue.main.async {
+            // go to the main thread to update UI
+            DispatchQueue.main.async {
+                guard let e = error else{
+                    self.currencies =  curr
                     self.tableView.reloadData()
+                    self.showTable()
+                    return
                 }
-                return
+                // Display error Message
+                print("Error in getting Currencies from Server " + e.localizedDescription)
+                //errorView.errorMessage = e.localizedDescription
+                self.showErrorView()
             }
-            // Display error Message
-            print("Error in getting Currencies from Server " + e.localizedDescription)
         })
         
         
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    private func showTable(){
+        tableView.isHidden = false
+        errorView.isHidden =  true
+    }
+    
+    private func showErrorView(){
+        tableView.isHidden = true
+        errorView.isHidden =  false
+    }
+
+}
+
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource{
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currencies.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.UI.CURRENCY_CELL_VIEW_ID) as! CurrencyTableCellView
         cell.setCurrency(c: currencies[indexPath.row])
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCurrency =  currencies[indexPath.row]
         performSegue(withIdentifier: Constants.UI.CURRENCY_CONVERTER_SEGUE, sender: nil)
     }
     
+    
+
+    
+}
 
 
+extension MainViewController: ErrorViewDelegate{
+    
+    func didClickTryAgain() {
+        reloadCurrencies()
+    }
+    
+    
+    
+    
 }
 

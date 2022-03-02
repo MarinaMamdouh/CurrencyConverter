@@ -10,83 +10,117 @@
     </dependencies>
     <scenes>
         <!--Currencies-->
-        <scene sceneID="IPs-Lj-8MD">
+        <scene sceneID="yku-CS-rLN">
             <objects>
-                <tableViewController id="dR6-Qe-bq6" customClass="MainViewController" customModule="SpringCardProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="9ur-W6-ef5">
+                <viewController id="toV-th-o8D" customClass="MainViewController" customModule="SpringCardProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TbE-b8-HzD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="Background"/>
-                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <color key="sectionIndexBackgroundColor" name="Background"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CurrencyCellView" id="wen-YY-uPv" customClass="CurrencyTableCellView" customModule="SpringCardProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="92.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wen-YY-uPv" id="bRW-Nb-zXL">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="92.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="mgf-Z1-4e7" userLabel="H Stack View">
-                                            <rect key="frame" x="20" y="10" width="374" height="62.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGY-Iz-39s" userLabel="line">
+                                <rect key="frame" x="0.0" y="88" width="414" height="0.5"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="5VP-G6-RWj"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnR-K3-iVu">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mDs-4T-gfk">
+                                <rect key="frame" x="0.0" y="89" width="414" height="773"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="sectionIndexBackgroundColor" name="Background"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CurrencyCellView" id="Bp7-Za-JeQ" customClass="CurrencyTableCellView" customModule="SpringCardProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="92.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bp7-Za-JeQ" id="L5B-ln-MqH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="92.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sJO-Gs-V2P" userLabel="V Stack View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="109.5" height="62.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fZZ-be-g58" userLabel="H Stack View">
+                                                    <rect key="frame" x="20" y="10" width="374" height="62.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4U-Oj-2j4" userLabel="Currency">
-                                                            <rect key="frame" x="0.0" y="0.0" width="109.5" height="36.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/04/2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPl-Rl-24m" userLabel="Date">
-                                                            <rect key="frame" x="0.0" y="46.5" width="109.5" height="16"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" name="DateColor"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iVg-KQ-Qsm" userLabel="V Stack View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="109.5" height="62.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYy-eZ-LV4" userLabel="Currency">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="109.5" height="36.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/04/2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJU-59-DH4" userLabel="Date">
+                                                                    <rect key="frame" x="0.0" y="46.5" width="109.5" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="textColor" name="DateColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.999888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nl-ba-KFE" userLabel="Rate">
+                                                            <rect key="frame" x="109.5" y="0.0" width="264.5" height="62.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                            <color key="textColor" name="CDarkGery"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.999888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAq-41-iRF" userLabel="Rate">
-                                                    <rect key="frame" x="109.5" y="0.0" width="264.5" height="62.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                                    <color key="textColor" name="CDarkGery"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <color key="backgroundColor" name="Background"/>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="mgf-Z1-4e7" secondAttribute="bottom" constant="20" id="58r-4h-9MQ"/>
-                                        <constraint firstItem="mgf-Z1-4e7" firstAttribute="leading" secondItem="bRW-Nb-zXL" secondAttribute="leading" constant="20" id="Ne4-tr-A8T"/>
-                                        <constraint firstAttribute="trailing" secondItem="mgf-Z1-4e7" secondAttribute="trailing" constant="20" id="ZWP-66-cfn"/>
-                                        <constraint firstItem="mgf-Z1-4e7" firstAttribute="top" secondItem="bRW-Nb-zXL" secondAttribute="top" constant="10" id="u6N-oc-Kne"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <connections>
-                                    <outlet property="currencyLabel" destination="Q4U-Oj-2j4" id="FSj-Y6-dIH"/>
-                                    <outlet property="dateLabel" destination="RPl-Rl-24m" id="YAK-rL-wWO"/>
-                                    <outlet property="rateLabel" destination="cAq-41-iRF" id="162-25-jSG"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="dR6-Qe-bq6" id="eGk-Kg-ofZ"/>
-                            <outlet property="delegate" destination="dR6-Qe-bq6" id="wBB-6Y-bWF"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Currencies" largeTitleDisplayMode="always" id="ecC-tW-K6y"/>
+                                            <color key="backgroundColor" name="Background"/>
+                                            <constraints>
+                                                <constraint firstItem="fZZ-be-g58" firstAttribute="leading" secondItem="L5B-ln-MqH" secondAttribute="leading" constant="20" id="7lY-iO-con"/>
+                                                <constraint firstAttribute="trailing" secondItem="fZZ-be-g58" secondAttribute="trailing" constant="20" id="dWT-bW-4Au"/>
+                                                <constraint firstAttribute="bottom" secondItem="fZZ-be-g58" secondAttribute="bottom" constant="20" id="uu3-sn-SbD"/>
+                                                <constraint firstItem="fZZ-be-g58" firstAttribute="top" secondItem="L5B-ln-MqH" secondAttribute="top" constant="10" id="vTF-33-pHF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="currencyLabel" destination="cYy-eZ-LV4" id="b1g-An-a63"/>
+                                            <outlet property="dateLabel" destination="MJU-59-DH4" id="C9o-Cc-Add"/>
+                                            <outlet property="rateLabel" destination="4Nl-ba-KFE" id="vmO-Y6-g7h"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-DH-HZg" userLabel="Error View" customClass="ErrorView" customModule="SpringCardProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="208" width="414" height="480"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="nxH-on-EVI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dzh-sp-1bA"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="mDs-4T-gfk" firstAttribute="leading" secondItem="dzh-sp-1bA" secondAttribute="leading" id="4Cm-nn-IWo"/>
+                            <constraint firstAttribute="trailing" secondItem="JGY-Iz-39s" secondAttribute="trailing" id="A9z-dS-n8r"/>
+                            <constraint firstItem="JGY-Iz-39s" firstAttribute="top" secondItem="dzh-sp-1bA" secondAttribute="top" id="Ebd-gi-1zM"/>
+                            <constraint firstItem="dzh-sp-1bA" firstAttribute="trailing" secondItem="mDs-4T-gfk" secondAttribute="trailing" id="FAD-OF-0Nw"/>
+                            <constraint firstItem="3nz-DH-HZg" firstAttribute="centerX" secondItem="TbE-b8-HzD" secondAttribute="centerX" id="IIG-Ej-1nB"/>
+                            <constraint firstItem="JGY-Iz-39s" firstAttribute="leading" secondItem="TbE-b8-HzD" secondAttribute="leading" id="Wm6-sw-NPK"/>
+                            <constraint firstItem="3nz-DH-HZg" firstAttribute="width" secondItem="TbE-b8-HzD" secondAttribute="width" id="Xwb-2I-ZsM"/>
+                            <constraint firstItem="mDs-4T-gfk" firstAttribute="top" secondItem="dzh-sp-1bA" secondAttribute="top" constant="1" id="YJx-Lc-Utu"/>
+                            <constraint firstItem="dzh-sp-1bA" firstAttribute="bottom" secondItem="mDs-4T-gfk" secondAttribute="bottom" id="aaf-eQ-NLS"/>
+                            <constraint firstItem="3nz-DH-HZg" firstAttribute="centerY" secondItem="TbE-b8-HzD" secondAttribute="centerY" id="hjF-1m-fhq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currencies" id="RNI-dg-IyK"/>
                     <connections>
-                        <segue destination="0qF-5q-mES" kind="show" identifier="ShowConverter" id="OSb-r0-wax"/>
+                        <outlet property="errorView" destination="3nz-DH-HZg" id="VKD-P7-eaX"/>
+                        <outlet property="tableView" destination="mDs-4T-gfk" id="4Es-jz-pCg"/>
+                        <segue destination="0qF-5q-mES" kind="show" identifier="ShowConverter" id="BMV-xw-TRP"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Z1-fq-1le" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDD-9s-1pd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-692.75362318840587" y="103.79464285714285"/>
+            <point key="canvasLocation" x="-659.4202898550725" y="103.79464285714285"/>
         </scene>
         <!--Currency Converter View Controller-->
         <scene sceneID="K3F-KQ-KSz">
@@ -198,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7W-ar-WII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57.971014492753625" y="103.79464285714285"/>
+            <point key="canvasLocation" x="316" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wq0-uc-xlp">
@@ -217,7 +251,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="dR6-Qe-bq6" kind="relationship" relationship="rootViewController" id="BmE-VO-sZC"/>
+                        <segue destination="toV-th-o8D" kind="relationship" relationship="rootViewController" id="97a-gv-73w"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6P-Q3-Ntv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,6 +271,9 @@
         </namedColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

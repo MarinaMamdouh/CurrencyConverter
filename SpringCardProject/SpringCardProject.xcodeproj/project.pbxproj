@@ -15,6 +15,7 @@
 		F83FE61527CFF56800F21C78 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE61427CFF56800F21C78 /* RoundedButton.swift */; };
 		F83FE61727CFFF1B00F21C78 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83FE61627CFFF1B00F21C78 /* ErrorView.xib */; };
 		F83FE61927D004BC00F21C78 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE61827D004BC00F21C78 /* ErrorView.swift */; };
+		F83FE61B27D0092A00F21C78 /* CircleLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE61A27D0092A00F21C78 /* CircleLoadingIndicator.swift */; };
 		F848D44127CD37080085CDA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D44027CD37080085CDA8 /* AppDelegate.swift */; };
 		F848D44327CD37080085CDA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D44227CD37080085CDA8 /* SceneDelegate.swift */; };
 		F848D44527CD37080085CDA8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D44427CD37080085CDA8 /* MainViewController.swift */; };
@@ -37,6 +38,7 @@
 		F83FE61427CFF56800F21C78 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		F83FE61627CFFF1B00F21C78 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		F83FE61827D004BC00F21C78 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F83FE61A27D0092A00F21C78 /* CircleLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoadingIndicator.swift; sourceTree = "<group>"; };
 		F848D43D27CD37080085CDA8 /* SpringCardProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringCardProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F848D44027CD37080085CDA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F848D44227CD37080085CDA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				F83FE61427CFF56800F21C78 /* RoundedButton.swift */,
+				F83FE61A27D0092A00F21C78 /* CircleLoadingIndicator.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				F848D44527CD37080085CDA8 /* MainViewController.swift in Sources */,
 				F8D3F2B827CD4C050018380C /* CurrencyTableCellView.swift in Sources */,
 				F848D45E27CD38640085CDA8 /* Constants.swift in Sources */,
+				F83FE61B27D0092A00F21C78 /* CircleLoadingIndicator.swift in Sources */,
 				F83FE60E27CEABEE00F21C78 /* CurrencyConverterViewController.swift in Sources */,
 				F848D46027CD39B40085CDA8 /* NetworkManager.swift in Sources */,
 				F8D3F2BA27CD4D620018380C /* Date+Extension.swift in Sources */,
