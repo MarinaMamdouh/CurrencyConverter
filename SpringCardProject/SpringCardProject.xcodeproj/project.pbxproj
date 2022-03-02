@@ -10,6 +10,9 @@
 		F83FE60A27CE945D00F21C78 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE60927CE945D00F21C78 /* JsonManager.swift */; };
 		F83FE60C27CE9DF000F21C78 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE60B27CE9DF000F21C78 /* Errors.swift */; };
 		F83FE60E27CEABEE00F21C78 /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE60D27CEABEE00F21C78 /* CurrencyConverterViewController.swift */; };
+		F83FE61027CFE5C100F21C78 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE60F27CFE5C100F21C78 /* CurrencyConverter.swift */; };
+		F83FE61227CFE67000F21C78 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE61127CFE67000F21C78 /* Double+Extension.swift */; };
+		F83FE61527CFF56800F21C78 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE61427CFF56800F21C78 /* RoundedButton.swift */; };
 		F848D44127CD37080085CDA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D44027CD37080085CDA8 /* AppDelegate.swift */; };
 		F848D44327CD37080085CDA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D44227CD37080085CDA8 /* SceneDelegate.swift */; };
 		F848D44527CD37080085CDA8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D44427CD37080085CDA8 /* MainViewController.swift */; };
@@ -27,6 +30,9 @@
 		F83FE60927CE945D00F21C78 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		F83FE60B27CE9DF000F21C78 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		F83FE60D27CEABEE00F21C78 /* CurrencyConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewController.swift; sourceTree = "<group>"; };
+		F83FE60F27CFE5C100F21C78 /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
+		F83FE61127CFE67000F21C78 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		F83FE61427CFF56800F21C78 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		F848D43D27CD37080085CDA8 /* SpringCardProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringCardProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F848D44027CD37080085CDA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F848D44227CD37080085CDA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F83FE61327CFF55000F21C78 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				F83FE61427CFF56800F21C78 /* RoundedButton.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		F848D43427CD37080085CDA8 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +92,7 @@
 				F848D45727CD37B20085CDA8 /* Views */,
 				F848D45427CD37670085CDA8 /* ViewControllers */,
 				F848D45627CD37800085CDA8 /* Extensions */,
+				F83FE61327CFF55000F21C78 /* Controls */,
 				F848D45927CD37F30085CDA8 /* Assets */,
 				F848D44E27CD37090085CDA8 /* Info.plist */,
 			);
@@ -98,6 +113,7 @@
 			children = (
 				F848D45F27CD39B40085CDA8 /* NetworkManager.swift */,
 				F83FE60927CE945D00F21C78 /* JsonManager.swift */,
+				F83FE60F27CFE5C100F21C78 /* CurrencyConverter.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -106,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				F8D3F2B927CD4D620018380C /* Date+Extension.swift */,
+				F83FE61127CFE67000F21C78 /* Double+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,7 +251,10 @@
 				F848D46027CD39B40085CDA8 /* NetworkManager.swift in Sources */,
 				F8D3F2BA27CD4D620018380C /* Date+Extension.swift in Sources */,
 				F83FE60C27CE9DF000F21C78 /* Errors.swift in Sources */,
+				F83FE61227CFE67000F21C78 /* Double+Extension.swift in Sources */,
 				F83FE60A27CE945D00F21C78 /* JsonManager.swift in Sources */,
+				F83FE61027CFE5C100F21C78 /* CurrencyConverter.swift in Sources */,
+				F83FE61527CFF56800F21C78 /* RoundedButton.swift in Sources */,
 				F848D44127CD37080085CDA8 /* AppDelegate.swift in Sources */,
 				F848D44327CD37080085CDA8 /* SceneDelegate.swift in Sources */,
 			);

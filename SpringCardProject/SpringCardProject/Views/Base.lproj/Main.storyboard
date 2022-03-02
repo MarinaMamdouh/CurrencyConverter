@@ -127,6 +127,9 @@
                                         <rect key="frame" x="0.0" y="62" width="374" height="51.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="amountTextFieldEdidingChanged:" destination="0qF-5q-mES" eventType="editingChanged" id="LH3-mG-wg9"/>
+                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAm-WJ-K9B" userLabel="HStack View">
                                         <rect key="frame" x="0.0" y="133.5" width="374" height="38"/>
@@ -148,7 +151,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pc8-ch-9re">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pc8-ch-9re" customClass="RoundedButton" customModule="SpringCardProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="191.5" width="374" height="50"/>
                                         <color key="backgroundColor" name="CDarkGery"/>
                                         <constraints>
@@ -159,6 +162,11 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="convertBtnClicked:" destination="0qF-5q-mES" eventType="touchUpInside" id="UA1-9Q-BCh"/>
                                         </connections>
@@ -182,6 +190,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="amountDollarsTextField" destination="ZHE-8V-0jz" id="pP2-D8-FZM"/>
+                        <outlet property="convertButton" destination="pc8-ch-9re" id="129-VQ-fIb"/>
                         <outlet property="rateLabel" destination="0BU-wP-hnt" id="JKk-iX-8VM"/>
                         <outlet property="symbolLabel" destination="m8h-fr-OBY" id="Xg2-tI-DtQ"/>
                         <outlet property="totalAmountLabel" destination="8jd-an-7mF" id="grb-yz-RiF"/>
