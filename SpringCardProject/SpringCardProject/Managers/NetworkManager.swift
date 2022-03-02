@@ -30,6 +30,7 @@ class NetworkManager{
         // 3- Create Task for the session
         let task = session.dataTask(with: url) { data, response, error in
             if let _ = error {
+                
                 completionHandler([], Errors.NetworkError)
                 return
             }

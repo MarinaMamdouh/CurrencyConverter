@@ -13,6 +13,8 @@
 		F83FE61027CFE5C100F21C78 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE60F27CFE5C100F21C78 /* CurrencyConverter.swift */; };
 		F83FE61227CFE67000F21C78 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE61127CFE67000F21C78 /* Double+Extension.swift */; };
 		F83FE61527CFF56800F21C78 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE61427CFF56800F21C78 /* RoundedButton.swift */; };
+		F83FE61727CFFF1B00F21C78 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83FE61627CFFF1B00F21C78 /* ErrorView.xib */; };
+		F83FE61927D004BC00F21C78 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE61827D004BC00F21C78 /* ErrorView.swift */; };
 		F848D44127CD37080085CDA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D44027CD37080085CDA8 /* AppDelegate.swift */; };
 		F848D44327CD37080085CDA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D44227CD37080085CDA8 /* SceneDelegate.swift */; };
 		F848D44527CD37080085CDA8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D44427CD37080085CDA8 /* MainViewController.swift */; };
@@ -33,6 +35,8 @@
 		F83FE60F27CFE5C100F21C78 /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
 		F83FE61127CFE67000F21C78 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		F83FE61427CFF56800F21C78 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		F83FE61627CFFF1B00F21C78 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		F83FE61827D004BC00F21C78 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F848D43D27CD37080085CDA8 /* SpringCardProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringCardProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F848D44027CD37080085CDA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F848D44227CD37080085CDA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				F8D3F2B727CD4C050018380C /* CurrencyTableCellView.swift */,
+				F83FE61827D004BC00F21C78 /* ErrorView.swift */,
+				F83FE61627CFFF1B00F21C78 /* ErrorView.xib */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 				F848D44D27CD37090085CDA8 /* LaunchScreen.storyboard in Resources */,
 				F848D44A27CD37090085CDA8 /* Assets.xcassets in Resources */,
 				F848D44827CD37080085CDA8 /* Main.storyboard in Resources */,
+				F83FE61727CFFF1B00F21C78 /* ErrorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +260,7 @@
 				F83FE60C27CE9DF000F21C78 /* Errors.swift in Sources */,
 				F83FE61227CFE67000F21C78 /* Double+Extension.swift in Sources */,
 				F83FE60A27CE945D00F21C78 /* JsonManager.swift in Sources */,
+				F83FE61927D004BC00F21C78 /* ErrorView.swift in Sources */,
 				F83FE61027CFE5C100F21C78 /* CurrencyConverter.swift in Sources */,
 				F83FE61527CFF56800F21C78 /* RoundedButton.swift in Sources */,
 				F848D44127CD37080085CDA8 /* AppDelegate.swift in Sources */,
