@@ -16,7 +16,11 @@ protocol ErrorViewDelegate{
 class ErrorView: UIView{
     
     var delegate:ErrorViewDelegate!
-    var errorMessage:String!
+    var errorMessage:String!{
+        didSet{
+            updateErrorMessage()
+        }
+    }
     private let nibName = Constants.UI.ERROR_VIEW_NIB_NAME
     @IBOutlet var containerView: UIView!
     @IBOutlet weak var errorMessageLabel: UILabel!
@@ -34,6 +38,10 @@ class ErrorView: UIView{
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         // update the errorMessage label while drawing the view
+        updateErrorMessage()
+    }
+    
+    private func updateErrorMessage(){
         if let msg = errorMessage {
             errorMessageLabel.text = msg
         }
