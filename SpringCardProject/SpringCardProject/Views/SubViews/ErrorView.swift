@@ -29,6 +29,13 @@ class ErrorView: UIView{
         commonInit()
     }
     
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        if let msg = errorMessage {
+            errorMessageLabel.text = msg
+        }
+    }
+    
     private func commonInit(){
         let viewFromXib = Bundle.main.loadNibNamed(nibName, owner: self, options: nil)![0] as! UIView
         viewFromXib.frame = self.bounds
@@ -42,14 +49,5 @@ class ErrorView: UIView{
         
     }
     
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        if let msg = errorMessage {
-            errorMessageLabel.text = msg
-        }
-    }
-    
-    class func instanceFromNib() -> UIView {
-        return UINib(nibName: "ErrorView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
-    }
+
 }

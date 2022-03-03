@@ -58,7 +58,7 @@ extension CurrencyConverterViewController {
         let amountInDollars =  Int(amountInDollarsString!)!
         let convertedAmount = CurrencyConverter.instance.convert(amountInUSD: amountInDollars, toCurrency: currency)
         
-        let convertedAmountFormated =  convertedAmount.formatToMoney()
+        let convertedAmountFormated =  convertedAmount.toMoney
         totalAmountLabel.text =  convertedAmountFormated
     }
     

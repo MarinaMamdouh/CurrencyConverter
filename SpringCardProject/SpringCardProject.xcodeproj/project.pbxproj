@@ -27,7 +27,18 @@
 		F848D46327CD3B250085CDA8 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848D46227CD3B250085CDA8 /* Currency.swift */; };
 		F8D3F2B827CD4C050018380C /* CurrencyTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3F2B727CD4C050018380C /* CurrencyTableCellView.swift */; };
 		F8D3F2BA27CD4D620018380C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3F2B927CD4D620018380C /* Date+Extension.swift */; };
+		F8D5AAE627D1425A005A00F8 /* SpringCardProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5AAE527D1425A005A00F8 /* SpringCardProjectTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8D5AAE727D1425A005A00F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F848D43527CD37080085CDA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F848D43C27CD37080085CDA8;
+			remoteInfo = SpringCardProject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F83FE60927CE945D00F21C78 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
@@ -52,10 +63,20 @@
 		F848D46227CD3B250085CDA8 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		F8D3F2B727CD4C050018380C /* CurrencyTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableCellView.swift; sourceTree = "<group>"; };
 		F8D3F2B927CD4D620018380C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		F8D5AADB27D1415D005A00F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F8D5AAE327D1425A005A00F8 /* SpringCardProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpringCardProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D5AAE527D1425A005A00F8 /* SpringCardProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringCardProjectTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F848D43A27CD37080085CDA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D5AAE027D1425A005A00F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				F848D43F27CD37080085CDA8 /* SpringCardProject */,
+				F8D5AAE427D1425A005A00F8 /* SpringCardProjectTests */,
 				F848D43E27CD37080085CDA8 /* Products */,
+				F8D5AADA27D1415D005A00F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				F848D43D27CD37080085CDA8 /* SpringCardProject.app */,
+				F8D5AAE327D1425A005A00F8 /* SpringCardProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,6 +205,22 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
+		F8D5AADA27D1415D005A00F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8D5AADB27D1415D005A00F8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8D5AAE427D1425A005A00F8 /* SpringCardProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8D5AAE527D1425A005A00F8 /* SpringCardProjectTests.swift */,
+			);
+			path = SpringCardProjectTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,6 +241,24 @@
 			productReference = F848D43D27CD37080085CDA8 /* SpringCardProject.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F8D5AAE227D1425A005A00F8 /* SpringCardProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8D5AAE927D1425A005A00F8 /* Build configuration list for PBXNativeTarget "SpringCardProjectTests" */;
+			buildPhases = (
+				F8D5AADF27D1425A005A00F8 /* Sources */,
+				F8D5AAE027D1425A005A00F8 /* Frameworks */,
+				F8D5AAE127D1425A005A00F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8D5AAE827D1425A005A00F8 /* PBXTargetDependency */,
+			);
+			name = SpringCardProjectTests;
+			productName = SpringCardProjectTests;
+			productReference = F8D5AAE327D1425A005A00F8 /* SpringCardProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,6 +271,10 @@
 				TargetAttributes = {
 					F848D43C27CD37080085CDA8 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					F8D5AAE227D1425A005A00F8 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = F848D43C27CD37080085CDA8;
 					};
 				};
 			};
@@ -230,6 +292,7 @@
 			projectRoot = "";
 			targets = (
 				F848D43C27CD37080085CDA8 /* SpringCardProject */,
+				F8D5AAE227D1425A005A00F8 /* SpringCardProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +306,13 @@
 				F848D44A27CD37090085CDA8 /* Assets.xcassets in Resources */,
 				F848D44827CD37080085CDA8 /* Main.storyboard in Resources */,
 				F83FE61727CFFF1B00F21C78 /* ErrorView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D5AAE127D1425A005A00F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +342,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8D5AADF27D1425A005A00F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D5AAE627D1425A005A00F8 /* SpringCardProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8D5AAE827D1425A005A00F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F848D43C27CD37080085CDA8 /* SpringCardProject */;
+			targetProxy = F8D5AAE727D1425A005A00F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F848D44627CD37080085CDA8 /* Main.storyboard */ = {
@@ -466,6 +552,52 @@
 			};
 			name = Release;
 		};
+		F8D5AAEA27D1425A005A00F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6WH3S8GMZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.MarinaRiad.SpringCardProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpringCardProject.app/SpringCardProject";
+			};
+			name = Debug;
+		};
+		F8D5AAEB27D1425A005A00F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6WH3S8GMZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.MarinaRiad.SpringCardProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpringCardProject.app/SpringCardProject";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -483,6 +615,15 @@
 			buildConfigurations = (
 				F848D45227CD37090085CDA8 /* Debug */,
 				F848D45327CD37090085CDA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8D5AAE927D1425A005A00F8 /* Build configuration list for PBXNativeTarget "SpringCardProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D5AAEA27D1425A005A00F8 /* Debug */,
+				F8D5AAEB27D1425A005A00F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

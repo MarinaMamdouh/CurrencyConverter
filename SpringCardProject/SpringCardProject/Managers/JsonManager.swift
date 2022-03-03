@@ -14,12 +14,10 @@ class JsonManager{
     
     // parse retrieved data to any Codable Type and return instance of that type
     // or if there is a problem while parsing throws error and returns nil
-    func parse<T>( data: Data, to:T.Type) throws -> T? where T : Codable{
+    func parse<T>( data: Data, toType:T.Type) throws -> T where T : Codable{
         let decoder = JSONDecoder()
-        if let jsonCurrencies = try? decoder.decode(to, from: data){
-            return jsonCurrencies
-        }
-        return nil
+        let jsonObjects = try decoder.decode(toType, from: data)
+        return jsonObjects
     }
     
 }

@@ -21,7 +21,7 @@ class CurrencyTableCellView:UITableViewCell{
         currency = c
         currencyLabel.text =  c.symbol
         dateLabel.text = c.date.getOurDate()
-        rateLabel.text =  "\(c.rate)"
+        rateLabel.text =  c.rate.toString
     }
     
     

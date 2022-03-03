@@ -24,10 +24,13 @@
                                     <constraint firstAttribute="height" constant="0.5" id="5VP-G6-RWj"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnR-K3-iVu">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnR-K3-iVu" userLabel="LoadingIndicator" customClass="CircleLoadingIndicator" customModule="SpringCardProject" customModuleProvider="target">
+                                <rect key="frame" x="157" y="348" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="cQQ-n1-RdE"/>
+                                    <constraint firstAttribute="width" secondItem="lnR-K3-iVu" secondAttribute="height" multiplier="1:1" id="gXK-Lg-vH1"/>
+                                </constraints>
                             </view>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mDs-4T-gfk">
                                 <rect key="frame" x="0.0" y="89" width="414" height="773"/>
@@ -100,6 +103,7 @@
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="mDs-4T-gfk" firstAttribute="leading" secondItem="dzh-sp-1bA" secondAttribute="leading" id="4Cm-nn-IWo"/>
+                            <constraint firstItem="lnR-K3-iVu" firstAttribute="centerY" secondItem="TbE-b8-HzD" secondAttribute="centerY" constant="-50" id="4gT-nD-ZE1"/>
                             <constraint firstAttribute="trailing" secondItem="JGY-Iz-39s" secondAttribute="trailing" id="A9z-dS-n8r"/>
                             <constraint firstItem="JGY-Iz-39s" firstAttribute="top" secondItem="dzh-sp-1bA" secondAttribute="top" id="Ebd-gi-1zM"/>
                             <constraint firstItem="dzh-sp-1bA" firstAttribute="trailing" secondItem="mDs-4T-gfk" secondAttribute="trailing" id="FAD-OF-0Nw"/>
@@ -107,6 +111,7 @@
                             <constraint firstItem="JGY-Iz-39s" firstAttribute="leading" secondItem="TbE-b8-HzD" secondAttribute="leading" id="Wm6-sw-NPK"/>
                             <constraint firstItem="3nz-DH-HZg" firstAttribute="width" secondItem="TbE-b8-HzD" secondAttribute="width" id="Xwb-2I-ZsM"/>
                             <constraint firstItem="mDs-4T-gfk" firstAttribute="top" secondItem="dzh-sp-1bA" secondAttribute="top" constant="1" id="YJx-Lc-Utu"/>
+                            <constraint firstItem="lnR-K3-iVu" firstAttribute="centerX" secondItem="TbE-b8-HzD" secondAttribute="centerX" id="Yhk-lV-0Ie"/>
                             <constraint firstItem="dzh-sp-1bA" firstAttribute="bottom" secondItem="mDs-4T-gfk" secondAttribute="bottom" id="aaf-eQ-NLS"/>
                             <constraint firstItem="3nz-DH-HZg" firstAttribute="centerY" secondItem="TbE-b8-HzD" secondAttribute="centerY" id="hjF-1m-fhq"/>
                         </constraints>
@@ -114,6 +119,7 @@
                     <navigationItem key="navigationItem" title="Currencies" id="RNI-dg-IyK"/>
                     <connections>
                         <outlet property="errorView" destination="3nz-DH-HZg" id="VKD-P7-eaX"/>
+                        <outlet property="loadingIndicator" destination="lnR-K3-iVu" id="Wki-Fd-6hu"/>
                         <outlet property="tableView" destination="mDs-4T-gfk" id="4Es-jz-pCg"/>
                         <segue destination="0qF-5q-mES" kind="show" identifier="ShowConverter" id="BMV-xw-TRP"/>
                     </connections>
