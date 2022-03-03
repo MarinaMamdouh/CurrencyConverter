@@ -11,8 +11,9 @@ class NetworkManager{
     // singleton instance of NetworkManager
     static let networkManager = NetworkManager()
     
-    // get the Current currencies Rate
+    // get the Current currencies Rate from API
     func getCurriencesRate(completionHandler:@escaping([Currency] , Error?)-> Void){
+        
         // construct URL string e.g: "https://openexchangerates.org/api/latest.json?app_id=YOUR_APP_ID"
         let apiURL = "\(Constants.API.API_URL)" +
                      "\(Constants.API.LatestCurrencies.ENDPOINT)?" +
@@ -22,6 +23,7 @@ class NetworkManager{
         // Validate the URL
         guard let url = URL(string: apiURL) else{
             print("URL provided is not Valid")
+            // send completion handler with empty list and API Error
             completionHandler([],Errors.ApiError)
             return
         }
@@ -29,26 +31,29 @@ class NetworkManager{
         let session = URLSession(configuration: .default)
         // 3- Create Task for the session
         let task = session.dataTask(with: url) { data, response, error in
-            if let _ = error {
-                
-                completionHandler([], Errors.NetworkError)
+            if let e = error {
+                // API returns error
+                print(e)
+                // send completion handler with empty list and API Error
+                completionHandler([], Errors.ApiError)
                 return
             }
-            
+            // data is found and no error
             if let mydata = data {
                 do{
+                    // try parsing the data by jsonManager to CurrencyData object
                     let jsonCurrencies = try JsonManager.jsonManager.parse(data: mydata, toType: CurrencyData.self)
                     
+                    // get currencies list from currencyData
                     let currencies = jsonCurrencies.getCurrencies()
-                    if currencies.count == 0{
-                        completionHandler([],Errors.ParsingDataError)
-                    } else{
-                        completionHandler(currencies,nil)
-                    }
+                    // send completion handler with currency list and no error
+                    completionHandler(currencies,nil)
                     
                 }
+                // catch the exception if something wrong happened while json parsing
                 catch{
                     print(error)
+                    // send completion handler with empty list and parsing error
                     completionHandler([], Errors.ParsingDataError)
                 }
             
@@ -58,11 +63,6 @@ class NetworkManager{
         // 4- Start the Task
         task.resume()
         
-//        //// testing UI with custom data
-//        let c1 =  Currency(symbol: "AED", rate: 3.67891, date: Date.now)
-//        let c2 =  Currency(symbol: "AFN", rate: 70.078956, date: Date.now)
-//        let c3 = Currency(symbol: "ALL", rate: 104.65, date: Date.now)
-//        completionHandler([c1,c2,c3], nil)
     }
      
 }

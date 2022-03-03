@@ -17,9 +17,11 @@ class CurrencyTableCellView:UITableViewCell{
     
     private var currency:Currency!
     
+    // set the currency cell labels with currencyobject values
     func setCurrency(c:Currency){
         currency = c
         currencyLabel.text =  c.symbol
+        // get the date formatted with our app format
         dateLabel.text = c.date.getOurDate()
         rateLabel.text =  c.rate.toString
     }

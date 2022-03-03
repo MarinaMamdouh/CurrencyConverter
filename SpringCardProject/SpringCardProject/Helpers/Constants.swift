@@ -11,6 +11,7 @@ struct Constants {
     
     //// General Constants//////
     static let DATE_FORMAT = "MM/dd/yyyy"
+    static let USD_AMOUNT_INITIAL_VALUE = 1
     
     ///// API Constants//////
     struct API{
@@ -23,10 +24,11 @@ struct Constants {
         }
     }
     
+    //////// Error Messages Constants //////
     struct ErrorMessages{
-        static let NETWORK_ERROR = "Unable to connect. Check your internet and try again."
-        static let API_ERROR = "OPPS!! The Problem is with our Servers. Please try again."
-        static let PARSING_DATA_ERROR = "Something wrong is Happened. Re-load "
+        static let NETWORK_ERROR = "Check your internet and try again."
+        static let API_ERROR = "The Problem is with our Servers Please try again."
+        static let PARSING_DATA_ERROR = "Something went wrong Please try again."
     }
     
     /////// User Interface Constants /////
@@ -34,6 +36,8 @@ struct Constants {
         static let CURRENCY_CELL_VIEW_ID = "CurrencyCellView"
         static let BACKGROUND_COLOR_NAME = "Background"
         static let CURRENCY_CONVERTER_SEGUE = "ShowConverter"
+        static let ERROR_VIEW_NIB_NAME = "ErrorView"
+        
         
     }
     
