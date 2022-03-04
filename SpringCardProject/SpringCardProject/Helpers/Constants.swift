@@ -34,14 +34,21 @@ struct Constants {
     /////// User Interface Constants /////
     struct UI{
         static let CURRENCY_CELL_VIEW_ID = "CurrencyCellView"
-        static let BACKGROUND_COLOR_NAME = "Background"
+        static let ERROR_VIEW_NIB_NAME = "ErrorView"
+        // Seques Identifiers
         static let CURRENCY_CONVERTER_SEGUE = "ShowConverter"
         static let MAIN_SCREEN_SEGUE = "main"
-        static let ERROR_VIEW_NIB_NAME = "ErrorView"
+        /// Colors
+        static let BACKGROUND_COLOR_NAME = "Background"
         static let TEXT_DARK_GRAY_COLOR = "CDarkGery"
+        static let TEXT_BLACK_COLOR = "CBlack"
+        static let TEXT_WHITE_COLOR = "CWhite"
+        /// Animation constants
         static let ENTRY_ANIMATION_DUARATION = 0.7
         static let ENTRY_ANIMATION_DELAY = 0.2
         static let ENTRY_YSHIFT_TABLE =  150.0
+        
+        // texts and messages
         struct Texts{
             static let LOADING_TEXT = "Loading ..."
             static let ALERT_INVALID_AMOUNT_TITLE = "Invalid Amount"

@@ -52,7 +52,7 @@ class MainViewController: UIViewController {
                 // adjust the navigation bar Back button to have no word and color to be black
                 let backItem = UIBarButtonItem()
                 backItem.title = ""
-                backItem.tintColor = .black
+                backItem.tintColor = UIColor(named: Constants.UI.TEXT_BLACK_COLOR)
                 navigationItem.backBarButtonItem = backItem
             }
         }
