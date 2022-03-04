@@ -29,6 +29,7 @@
 		F8D3F2BA27CD4D620018380C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3F2B927CD4D620018380C /* Date+Extension.swift */; };
 		F8D5AAE627D1425A005A00F8 /* SpringCardProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5AAE527D1425A005A00F8 /* SpringCardProjectTests.swift */; };
 		F8D5AAEF27D244C1005A00F8 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5AAEE27D244C1005A00F8 /* UIKit+Extension.swift */; };
+		F8D5AAF327D26015005A00F8 /* AnimatedLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5AAF227D26015005A00F8 /* AnimatedLaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		F8D5AAE327D1425A005A00F8 /* SpringCardProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpringCardProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D5AAE527D1425A005A00F8 /* SpringCardProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringCardProjectTests.swift; sourceTree = "<group>"; };
 		F8D5AAEE27D244C1005A00F8 /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
+		F8D5AAF227D26015005A00F8 /* AnimatedLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		F848D45427CD37670085CDA8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F8D5AAF227D26015005A00F8 /* AnimatedLaunchViewController.swift */,
 				F848D44427CD37080085CDA8 /* MainViewController.swift */,
 				F83FE60D27CEABEE00F21C78 /* CurrencyConverterViewController.swift */,
 			);
@@ -332,6 +335,7 @@
 				F848D45E27CD38640085CDA8 /* Constants.swift in Sources */,
 				F83FE61B27D0092A00F21C78 /* CircleLoadingIndicator.swift in Sources */,
 				F83FE60E27CEABEE00F21C78 /* CurrencyConverterViewController.swift in Sources */,
+				F8D5AAF327D26015005A00F8 /* AnimatedLaunchViewController.swift in Sources */,
 				F848D46027CD39B40085CDA8 /* NetworkManager.swift in Sources */,
 				F8D5AAEF27D244C1005A00F8 /* UIKit+Extension.swift in Sources */,
 				F8D3F2BA27CD4D620018380C /* Date+Extension.swift in Sources */,

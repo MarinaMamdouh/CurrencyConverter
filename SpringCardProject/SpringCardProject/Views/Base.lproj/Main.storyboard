@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PLi-ve-hPP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ceb-2m-Dpg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -241,10 +241,55 @@
             </objects>
             <point key="canvasLocation" x="316" y="104"/>
         </scene>
+        <!--Animated Launch View Controller-->
+        <scene sceneID="a0P-al-AW8">
+            <objects>
+                <viewController id="ceb-2m-Dpg" customClass="AnimatedLaunchViewController" customModule="SpringCardProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="01U-o3-jun">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="awF-dd-50N">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Kyb-Dz-y5j"/>
+                                    <constraint firstAttribute="width" secondItem="awF-dd-50N" secondAttribute="height" id="VXj-af-ggV"/>
+                                    <constraint firstAttribute="width" constant="200" id="WdJ-Tj-U1f"/>
+                                    <constraint firstAttribute="width" secondItem="awF-dd-50N" secondAttribute="height" multiplier="1:1" id="vTo-h9-BJA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX6-ob-23b" userLabel="Spring Cards">
+                                <rect key="frame" x="136.5" y="583.5" width="141.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" name="CDarkGrey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h9Y-6P-Pf9"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="awF-dd-50N" firstAttribute="centerX" secondItem="01U-o3-jun" secondAttribute="centerX" id="5MY-H2-fef"/>
+                            <constraint firstItem="CX6-ob-23b" firstAttribute="centerY" secondItem="01U-o3-jun" secondAttribute="centerY" constant="150" id="9PL-IM-KfE"/>
+                            <constraint firstItem="awF-dd-50N" firstAttribute="width" secondItem="awF-dd-50N" secondAttribute="height" id="COr-rG-rdz"/>
+                            <constraint firstItem="CX6-ob-23b" firstAttribute="centerX" secondItem="01U-o3-jun" secondAttribute="centerX" id="Le8-aI-uKp"/>
+                            <constraint firstItem="awF-dd-50N" firstAttribute="centerY" secondItem="01U-o3-jun" secondAttribute="centerY" id="h7r-ez-X4j"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImage" destination="awF-dd-50N" id="ydu-Fq-2zr"/>
+                        <outlet property="logoLabel" destination="CX6-ob-23b" id="BTS-8s-wqz"/>
+                        <segue destination="PLi-ve-hPP" kind="presentation" identifier="main" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="cIj-Sx-5oU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHW-4p-9wW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2496" y="104"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wq0-uc-xlp">
             <objects>
                 <navigationController id="PLi-ve-hPP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oyV-Ja-3Ua"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vg9-Lw-O7X">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -267,11 +312,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="250" height="250"/>
         <namedColor name="Background">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="CDarkGery">
             <color red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="CDarkGrey">
+            <color red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DateColor">
             <color red="0.60799998044967651" green="0.60799998044967651" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

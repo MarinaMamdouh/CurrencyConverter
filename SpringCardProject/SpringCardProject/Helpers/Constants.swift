@@ -36,6 +36,7 @@ struct Constants {
         static let CURRENCY_CELL_VIEW_ID = "CurrencyCellView"
         static let BACKGROUND_COLOR_NAME = "Background"
         static let CURRENCY_CONVERTER_SEGUE = "ShowConverter"
+        static let MAIN_SCREEN_SEGUE = "main"
         static let ERROR_VIEW_NIB_NAME = "ErrorView"
         static let TEXT_DARK_GRAY_COLOR = "CDarkGery"
         static let ENTRY_ANIMATION_DUARATION = 0.7
