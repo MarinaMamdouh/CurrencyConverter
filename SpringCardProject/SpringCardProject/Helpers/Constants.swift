@@ -37,8 +37,16 @@ struct Constants {
         static let BACKGROUND_COLOR_NAME = "Background"
         static let CURRENCY_CONVERTER_SEGUE = "ShowConverter"
         static let ERROR_VIEW_NIB_NAME = "ErrorView"
-        
-        
+        static let TEXT_DARK_GRAY_COLOR = "CDarkGery"
+        static let ENTRY_ANIMATION_DUARATION = 0.7
+        static let ENTRY_ANIMATION_DELAY = 0.2
+        static let ENTRY_YSHIFT_TABLE =  150.0
+        struct Texts{
+            static let LOADING_TEXT = "Loading ..."
+            static let ALERT_INVALID_AMOUNT_TITLE = "Invalid Amount"
+            static let ALERT_INVALID_AMOUNT_MESSAGE = "Please enter valid amount"
+            static let ALERT_OK_BUTTON = "Ok"
+        }
     }
     
     

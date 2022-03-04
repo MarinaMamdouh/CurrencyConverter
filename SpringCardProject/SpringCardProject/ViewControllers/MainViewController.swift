@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     //// PROPERTIES /////
     private var currencies:[Currency] = []
     private var selectedCurrency:Currency!
+    private let refreshControl = UIRefreshControl()
     
     //// OVERRIDE METHODS //////
     override func viewDidLayoutSubviews() {
@@ -33,6 +34,7 @@ class MainViewController: UIViewController {
         errorView.delegate =  self
         // start by showing the indcator
         self.showLoadingIndicator()
+        self.setupTableRefresher()
         // Apply small time timer to show loading Indicator and then reload the table with currencies sent by the server
         // NOTE: this timer is made to represents the UI when user waits for API response usually in big data APIs take time to give response ( so in real life cases there is no timer before calling API)
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(reloadCurrencies), userInfo: nil, repeats: false)
@@ -103,6 +105,7 @@ extension MainViewController{
                     // load the tableview with the list
                     self.tableView.reloadData()
                     self.showTable()
+                    self.stopTableRefresher()
                     return
                 }
                 // if there is an error Display error Message
@@ -118,6 +121,7 @@ extension MainViewController{
     // used when there is data needs to be displayed
     private func showTable(){
         tableView.isHidden = false
+        tableView.entryAnimation(withDuration: 0.7, delay: 0.2, yShift: Constants.UI.ENTRY_YSHIFT_TABLE)
         // hide errorView and loadingIndicator
         errorView.isHidden =  true
         loadingIndicator.isHidden =  true
@@ -128,6 +132,7 @@ extension MainViewController{
     // used when an error needs to be displayed
     private func showErrorView(){
         errorView.isHidden =  false
+        errorView.entryAnimation()
         // hide tableView and loadingIndicator
         tableView.isHidden = true
         loadingIndicator.isHidden = true
@@ -144,6 +149,17 @@ extension MainViewController{
         loadingIndicator.animate()
         
         
+    }
+    
+    private func setupTableRefresher(){
+        tableView.refreshControl = refreshControl
+        refreshControl.tintColor = .lightGray
+        refreshControl.addTarget(self, action: #selector(reloadCurrencies), for: .valueChanged)
+    }
+    
+    
+    private func stopTableRefresher(){
+        refreshControl.endRefreshing()
     }
     
     

@@ -17,13 +17,14 @@ struct Currency{
 
 
 struct CurrencyData:Codable{
-    var timestamp:Int
+    var timestamp:Double
     var rates:[String:Double]
     
     // export the currencies list from the DataModel
     func getCurrencies()->[Currency]{
         var currencies:[Currency] = []
-        let date = Date()
+        // convert timestamp to date
+        let date = Date(timeIntervalSince1970: timestamp)
         // sort the currencuies symbols alphibaticaly A-Z
         let ratesKeys =  rates.keys.sorted()
         for key in ratesKeys{

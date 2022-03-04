@@ -17,6 +17,8 @@ class CurrencyConverterViewController: UIViewController{
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var convertButton: RoundedButton!
     
+    @IBOutlet weak var containerStackView: UIStackView!
+    
     //////// PROPERTIES /////////
     var currency:Currency!
     
@@ -25,9 +27,12 @@ class CurrencyConverterViewController: UIViewController{
         super.viewDidLoad()
         // setup the navigationBar and Controls initialValues
         // then calculate the initial amount
+        // add entry animation to the whole View
         self.drawNavigationBar()
         self.setControlsInitialValues()
         self.calculateTotalAmount()
+        containerStackView.entryAnimation()
+        self.convertButton.setTitleColor(UIColor.red, for: .selected)
     }
 
     
@@ -58,7 +63,13 @@ extension CurrencyConverterViewController {
         var amountInDollarsString = amountDollarsTextField.text
         // get the amount in USD from textfield but remove the $ from it to get only the number to convert to Integer
         amountInDollarsString?.removeFirst()
-        let amountInDollars =  Int(amountInDollarsString!)!
+        // check of the validaty of amount( if it is numeric )
+        guard let amountInDollars =  Int(amountInDollarsString!) else{
+            // show alert with invalid amount message
+            self.showBasicAlert(with: Constants.UI.Texts.ALERT_INVALID_AMOUNT_TITLE, message: Constants.UI.Texts.ALERT_INVALID_AMOUNT_MESSAGE,
+                cancelButton: Constants.UI.Texts.ALERT_OK_BUTTON)
+            return
+        }
         // use the CUrrencyCOnverter to convert the amount to our given currency
         let convertedAmount = CurrencyConverter.instance.convert(amountInUSD: amountInDollars, toCurrency: currency)
         // format the converted amount to money format e.g. 3100 to 3,100

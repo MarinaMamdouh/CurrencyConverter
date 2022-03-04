@@ -10,9 +10,9 @@ import Foundation
 extension Date{
     
     //get string with date formatted with our APP preset date format in constants
-    func getOurDate()->String{
+    func getDateIn(format:String)->String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = Constants.DATE_FORMAT
+        dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
 

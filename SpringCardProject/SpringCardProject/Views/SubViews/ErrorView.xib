@@ -26,23 +26,23 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="khs-bv-Skg">
-                    <rect key="frame" x="101.5" y="188.5" width="304" height="213.5"/>
+                    <rect key="frame" x="101.5" y="188.5" width="304" height="213"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opps!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZ7-Cg-oAP">
-                            <rect key="frame" x="109" y="0.0" width="86.5" height="45"/>
+                            <rect key="frame" x="109" y="0.0" width="86.5" height="44.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="33"/>
                             <color key="textColor" name="CDarkGery"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong Please try again" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8WV-Lx-DXW" userLabel="error message">
-                            <rect key="frame" x="0.0" y="73" width="304" height="62.5"/>
+                            <rect key="frame" x="0.0" y="72.5" width="304" height="62.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <color key="textColor" name="DateColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDQ-TY-kcS" customClass="RoundedButton" customModule="SpringCardProject" customModuleProvider="target">
-                            <rect key="frame" x="77" y="163.5" width="150" height="50"/>
+                            <rect key="frame" x="77" y="163" width="150" height="50"/>
                             <color key="backgroundColor" name="CDarkGery"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="EGq-Jr-SQq"/>

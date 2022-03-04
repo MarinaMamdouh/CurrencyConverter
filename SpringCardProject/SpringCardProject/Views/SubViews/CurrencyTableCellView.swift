@@ -15,6 +15,12 @@ class CurrencyTableCellView:UITableViewCell{
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
     
+    override open var isHighlighted: Bool{
+        didSet{
+            self.highlight(withColor: .gray, forTime: 0.2)
+        }
+    }
+    
     private var currency:Currency!
     
     // set the currency cell labels with currencyobject values
@@ -22,7 +28,7 @@ class CurrencyTableCellView:UITableViewCell{
         currency = c
         currencyLabel.text =  c.symbol
         // get the date formatted with our app format
-        dateLabel.text = c.date.getOurDate()
+        dateLabel.text = c.date.getDateIn(format: Constants.DATE_FORMAT)
         rateLabel.text =  c.rate.toString
     }
     

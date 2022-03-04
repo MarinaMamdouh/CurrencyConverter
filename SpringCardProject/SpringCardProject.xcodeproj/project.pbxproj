@@ -28,6 +28,7 @@
 		F8D3F2B827CD4C050018380C /* CurrencyTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3F2B727CD4C050018380C /* CurrencyTableCellView.swift */; };
 		F8D3F2BA27CD4D620018380C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3F2B927CD4D620018380C /* Date+Extension.swift */; };
 		F8D5AAE627D1425A005A00F8 /* SpringCardProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5AAE527D1425A005A00F8 /* SpringCardProjectTests.swift */; };
+		F8D5AAEF27D244C1005A00F8 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D5AAEE27D244C1005A00F8 /* UIKit+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		F8D5AADB27D1415D005A00F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F8D5AAE327D1425A005A00F8 /* SpringCardProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpringCardProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D5AAE527D1425A005A00F8 /* SpringCardProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringCardProjectTests.swift; sourceTree = "<group>"; };
+		F8D5AAEE27D244C1005A00F8 /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				F8D3F2B927CD4D620018380C /* Date+Extension.swift */,
 				F83FE61127CFE67000F21C78 /* Double+Extension.swift */,
+				F8D5AAEE27D244C1005A00F8 /* UIKit+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				F83FE61B27D0092A00F21C78 /* CircleLoadingIndicator.swift in Sources */,
 				F83FE60E27CEABEE00F21C78 /* CurrencyConverterViewController.swift in Sources */,
 				F848D46027CD39B40085CDA8 /* NetworkManager.swift in Sources */,
+				F8D5AAEF27D244C1005A00F8 /* UIKit+Extension.swift in Sources */,
 				F8D3F2BA27CD4D620018380C /* Date+Extension.swift in Sources */,
 				F83FE60C27CE9DF000F21C78 /* Errors.swift in Sources */,
 				F83FE61227CFE67000F21C78 /* Double+Extension.swift in Sources */,

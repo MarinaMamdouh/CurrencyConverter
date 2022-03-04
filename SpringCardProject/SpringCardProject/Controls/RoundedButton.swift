@@ -10,6 +10,14 @@ import UIKit
 class RoundedButton: UIButton{
     
     @IBInspectable var cornerRadius:CGFloat = 0
+    
+    // effect makes button responds to clicking by changing the backgroundcolor for a 0.1 time
+    override open var isHighlighted: Bool {
+             didSet {
+                 self.highlight(withColor: .lightGray, forTime: 0.1)
+             }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
