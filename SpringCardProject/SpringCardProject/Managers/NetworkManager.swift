@@ -46,6 +46,9 @@ class NetworkManager{
                     
                     // get currencies list from currencyData
                     let currencies = jsonCurrencies.getCurrencies()
+                    if currencies.isEmpty{
+                        completionHandler([],Errors.ParsingDataError)
+                    }
                     // send completion handler with currency list and no error
                     completionHandler(currencies,nil)
                     

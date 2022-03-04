@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     private var currencies:[Currency] = []
     private var selectedCurrency:Currency!
     private let refreshControl = UIRefreshControl()
+    private var tableRefreshed = false
     
     //// OVERRIDE METHODS //////
     override func viewDidLayoutSubviews() {
@@ -102,7 +103,7 @@ extension MainViewController{
                 guard let e = error else{
                     // store the list in our VC to use it in other methods
                     self.currencies =  curr
-                    // load the tableview with the list
+                    // load the tableview with the list and stop the refresher
                     self.tableView.reloadData()
                     self.showTable()
                     self.stopTableRefresher()
@@ -113,15 +114,24 @@ extension MainViewController{
                 self.showErrorView()
             }
         })
-        
-        
+    }
+    
+    //same as reload currencies but with setting tablerefreshed flag to true
+    @objc private func refreshCurrencies(){
+      tableRefreshed =  true
+      self.reloadCurrencies()
     }
     
     // show table and hide other views
     // used when there is data needs to be displayed
     private func showTable(){
         tableView.isHidden = false
-        tableView.entryAnimation(withDuration: 0.7, delay: 0.2, yShift: Constants.UI.ENTRY_YSHIFT_TABLE)
+        // check if table refreshed or loaded
+        // refreshed : user refreshed table by scrolling down
+        // loaded: table will loaded for the first time or after error resolved
+        if !tableRefreshed {
+            tableView.entryAnimation(withDuration: 0.7, delay: 0.2, yShift: Constants.UI.ENTRY_YSHIFT_TABLE)
+        }
         // hide errorView and loadingIndicator
         errorView.isHidden =  true
         loadingIndicator.isHidden =  true
@@ -150,14 +160,14 @@ extension MainViewController{
         
         
     }
-    
+    // add refresh control to table view to refresh data from server
     private func setupTableRefresher(){
         tableView.refreshControl = refreshControl
         refreshControl.tintColor = .lightGray
-        refreshControl.addTarget(self, action: #selector(reloadCurrencies), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(refreshCurrencies), for: .valueChanged)
     }
     
-    
+    // method to be used to stop the refresher apperance and animation
     private func stopTableRefresher(){
         refreshControl.endRefreshing()
     }
@@ -173,6 +183,7 @@ extension MainViewController: ErrorViewDelegate{
     func didClickTryAgain() {
         // show indicator while trying again loading data from server
         showLoadingIndicator()
+        tableRefreshed =  false
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(reloadCurrencies), userInfo: nil, repeats: false)
     }
     
